@@ -1,0 +1,23 @@
+.urgent-important
+{
+    background-color: brown;
+    color: white;
+}
+
+.not-urgent-important
+{
+    color: white;
+    background-color: orangered;
+}
+
+.urgent-not-important
+{
+    color: white;
+    background-color: yellowgreen;
+}
+
+.not-urgent-not-important
+{
+    color: white;
+    background-color: lightgreen;
+}

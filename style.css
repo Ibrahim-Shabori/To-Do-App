@@ -1,0 +1,287 @@
+/* Start: General Styling */
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+}
+
+html, body
+{
+    width: 100%;
+}
+/* End: General Styling */
+
+/* Start: Header style */
+header
+{
+    width: 100%;  
+    padding: 10px;  
+}
+
+header h1, header p
+{
+    text-align: center;
+}
+
+header h1
+{
+    font-family: sans-serif;
+}
+
+header p
+{
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+/* End: Header style */
+
+/* Start: Main style */
+main
+{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+main form
+{
+    display:  grid;
+    grid-template-columns: 90% 9%;
+    width: 90%;
+    grid-gap: 1%;
+    grid-row-gap: 10px;
+}
+
+main form fieldset
+{
+    border: none;
+    width: 100%;
+}
+
+main form fieldset
+{
+    display: flex;
+    align-items: center;
+}
+
+main form fieldset label
+{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    margin-right: 10px;
+}
+main form fieldset input
+{
+    border: none;
+    font-size: 20px;
+    color: rgb(19, 18, 19);
+    outline: none;
+    border-bottom: 2px black solid;
+    width: 100%;
+    font-family: cursive;
+    padding: 5px;
+}
+
+main form fieldset input:focus
+{
+    border: none;
+    box-shadow: aquamarine 0px 0px 13px 0px;
+}
+
+main form .task-text, main form select
+{
+    grid-column: 1/2;
+}
+
+main form select
+{
+    font-size: 20px;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+main form select option
+{
+    font-weight: 700;
+    /* background-color: antiquewhite; */
+}
+
+main form select option:nth-child(2)
+{
+    color: brown;
+}
+
+main form select option:nth-child(3)
+{
+    color: orangered;
+}
+
+main form select option:nth-child(4)
+{
+    color: yellowgreen;
+}
+
+main form select option:nth-child(5)
+{
+    color: lightgreen;
+}
+
+main form button
+{
+    grid-row: 1/3;
+    grid-column: 2/3;
+    background-color: aquamarine;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 2.8em;
+    color: white;
+    box-shadow: #d300ff 1px 1px 2px 0px;
+}
+
+main form button:hover
+{
+    box-shadow:none;
+}
+
+@media (max-width: 1000px) 
+{
+    main form
+    {
+        grid-template-columns: 85% 14%;
+    }
+}
+
+@media (max-width: 700px) 
+{
+    main form
+    {
+        grid-template-columns: 80% 19%;
+    }
+}
+
+@media (max-width: 500px) 
+{
+    main form
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main form > div, select, button
+    {
+        width: 100%;
+    }
+    
+}
+/* End: Main style */
+
+/* Start: Tasks section style */
+section.tasks
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section.tasks div.progress
+{
+    width: 100%;
+}
+
+section.tasks div.tasks-container div.task-card
+{
+    width: 516px;
+    padding: 8px;
+    background-color: #7fffd48f;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 25px;
+    margin-bottom: 10px;
+}
+
+div.task-card div.periority
+{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    padding: 2px;
+    padding-left: 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+section.tasks div.tasks-container div.task-card form
+{
+    display: grid;
+    grid-template-columns: 20px 400px 60px;
+    grid-column-gap: 8px;
+    font-size: 20px;
+    font-family: cursive;
+    align-items: center;
+}
+
+div.task-card form div.checkbox
+{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    color: white;
+    border: 1px black solid;
+    font-size: 17px;
+}
+
+div.task-card form label
+{
+    padding-left: 10px;
+}
+
+div.task-card form button
+{
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #00000059;
+}
+
+div.task-card form button:hover
+{
+    color: #d300ff;
+}
+
+@media (max-width: 550px) 
+{
+    section.tasks div.tasks-container div.task-card
+    {
+        width: 310px;
+        padding: 5px;
+        padding-top: 25px;
+    } 
+
+    section.tasks div.tasks-container div.task-card form
+    {
+        display: grid;
+        grid-template-columns: 20px 240px 30px;
+        grid-column-gap: 5px;
+        font-size: 16px;
+    }
+
+    div.task-card div.periority
+    {
+        font-size: 12px;
+    }
+}
+/* End: Tasks section style */
